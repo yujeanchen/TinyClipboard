@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="tinyclipboard.js"></script>
+    
+</head >
+<body>
+    <div id="idTextArea">text to be copy</div> <input type="button" id="idButton1" value="Copy Div" />
+    <hr>
+    <input type="button" id="idButton2" value="Copy html passed in code" />
+
+    <script type="text/javascript">
+        var clipboard1 = new TinyClipboard({
+            button: "idButton1",
+            target: "idTextArea",
+        });
+        var clipboard2 = new TinyClipboard({
+            button: "idButton2",
+            content: '<a href="www.google.com"><strong>google link</strong></a>',
+            format: "html"
+        });
+    </script>
+</body>
+</html >

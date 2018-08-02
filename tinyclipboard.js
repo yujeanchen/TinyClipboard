@@ -52,7 +52,8 @@
         };
 
         var bindEvent = function (btn) {
-            document.getElementById(btn).addEventListener('click', copy);
+            var button = document.getElementById(btn);
+            button != null ? button.addEventListener('click', copy) : console.log("Could not find button " + btn);
         };
 
         var extendDefaults = function (properties) {
@@ -73,17 +74,17 @@
         };
 
         var copy = function () {
-            var msg,
+            var msg = false,
                 sel = window.getSelection();
-            if (settings.content !== "") {
+            if (settings.target == null && settings.content !== "") {
                 var element = createTmpDiv()
                     , body = document.body;
                 body.appendChild(element);
                 sel = select(element, sel, true);
                 msg = execCopy();
                 sel.deleteFromDocument();
-                body.removeChild(element);               
-            } else if (settings.target !== null) {
+                body.removeChild(element);
+            } else if (settings.target !== null && settings.content == "") {
                 var element = document.getElementById(settings.target);
                 if (element.tagName.toLowerCase() == "input" || element.tagName.toLowerCase() == "textarea") {
                     element.select();
@@ -92,6 +93,8 @@
                 }
                 msg = execCopy();
                 sel.removeAllRanges();
+            } else {
+                console.log("target and content can't be used together")
             }
             return msg;
         };
