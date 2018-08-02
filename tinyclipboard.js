@@ -15,7 +15,8 @@
             button: null,
             target: null
         }
-            , settings;
+            , settings
+            , msg = false;
         var execCopy = function () {
             var successful = false;
             try {
@@ -74,8 +75,7 @@
         };
 
         var copy = function () {
-            var msg = false,
-                sel = window.getSelection();
+            var sel = window.getSelection();
             if (settings.target == null && settings.content !== "") {
                 var element = createTmpDiv()
                     , body = document.body;
@@ -96,7 +96,6 @@
             } else {
                 console.log("target and content can't be used together")
             }
-            return msg;
         };
 
         var init = function (para) {
@@ -104,12 +103,16 @@
             if (settings.button !== null) { bindEvent(settings.button); }
         };
 
-        clipboard.destroy = function () {
-            settings.button.removeEventListener('click', copy, false);
+        this.message = function () {
+            return msg;
+        };
+
+        this.destroy = function () {
+            document.getElementById(settings.button).removeEventListener('click', copy, false);
             settings = defaults;
         };
 
-        init(options); 
+        init(options);
     }
 
     return clipboard;
