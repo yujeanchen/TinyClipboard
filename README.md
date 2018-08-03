@@ -32,16 +32,16 @@ var clipboard = new TinyClipboard({
 # Options
 |Option |Type |Default|Note|
 |------|--------|-----|----|
-|button|`String`|null|The button ID. This is required since copy will be executed when a button is clicked
-|target|`String`|null|The element ID. The target and content options are mutually exclusive
-|content|`String`|''|The target and content options are mutually exclusive
-|format|`String`|html|This option only works with the content option
+|button|`String`|null|The button ID. This is required since copy will be executed when a button is clicked.
+|target|`String`|null|The element ID. The target and content options are mutually exclusive.
+|content|`String`|''|The target and content options are mutually exclusive.
+|format|`String`|'html'|This option only works with the content option.
 
 # Methods
-`.destory()`
+`.destory()`:
 Destroy an element's TinyClipboard
 
-`.message()`
+`.message()`:
 Returns true if the copy was successful 
 
 # License
