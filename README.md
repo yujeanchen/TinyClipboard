@@ -45,4 +45,4 @@ Destroy an element's TinyClipboard
 Returns true if the copy was successful 
 
 # License
-MIT License Copyright (c) 2018 Yu-Jean Chen
+MIT Copyright (c) Yu-Jean Chen
