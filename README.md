@@ -5,7 +5,7 @@ Copy plain/rich text to clipbaord in browsers
 Add `<script type="text/javascript" src="tinyclipboard.js"></script>` to your page 
 
 # Usage
-Copy element text to clipboard
+Copy the element text to clipboard and keep formatting
 ```js
 var clipboard = new TinyClipboard({
   button: "idButton",
