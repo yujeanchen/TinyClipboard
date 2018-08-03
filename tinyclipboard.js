@@ -110,6 +110,7 @@
         this.destroy = function () {
             document.getElementById(settings.button).removeEventListener('click', copy, false);
             settings = defaults;
+            msg = false;
         };
 
         init(options);
