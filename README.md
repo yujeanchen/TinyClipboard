@@ -1,5 +1,5 @@
 # TinyClipboard
-Copy plain/rich text to clipbaord in browsers
+Copy plain/rich text to clipboard in browsers
 
 # Setup
 Add `<script type="text/javascript" src="tinyclipboard.js"></script>` to your page 
@@ -21,7 +21,7 @@ var clipboard = new TinyClipboard({
   format: 'html'
   });
 ```
-Copy plain text to clipbaord
+Copy plain text to clipboard
 ```js
 var clipboard = new TinyClipboard({
   button: 'idButton',
@@ -38,11 +38,14 @@ var clipboard = new TinyClipboard({
 |format|`String`|'html'|This option only works with the content option.
 
 # Methods
-`.destory()`:
+`.destroy()`:
 Destroy an element's TinyClipboard
 
 `.message()`:
-Returns true if the copy was successful 
+Returns true if the copy was successful
+
+# Support browsers
+IE 11, Chrome, Firefox, Safari 
 
 # License
 MIT Copyright (c) Yu-Jean Chen
