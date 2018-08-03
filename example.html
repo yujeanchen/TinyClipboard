@@ -8,14 +8,14 @@
     
 </head >
 <body>
-    <div id="idTextArea">text to be copy</div> <input type="button" id="idButton1" value="Copy Div" />
+    <div id="idDiv">text to be copy</div> <input type="button" id="idButton1" value="Copy Div" />
     <hr>
     <input type="button" id="idButton2" value="Copy html passed in code" />
 
     <script type="text/javascript">
         var clipboard1 = new TinyClipboard({
             button: "idButton1",
-            target: "idTextArea",
+            target: "idDiv"
         });
         var msg = clipboard1.message();
         console.log(msg);
