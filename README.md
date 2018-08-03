@@ -43,3 +43,6 @@ Destroy an element's TinyClipboard
 
 `.message()`
 Returns true if the copy was successful 
+
+# License
+MIT License Copyright (c) 2018 Yu-Jean Chen
