@@ -6,7 +6,7 @@
     <title></title>    
 </head >
 <body>
-    <div id="idDiv"><strong>text to copy<strong></div> <input type="button" id="idButton1" value="Copy Div" />
+    <div id="idDiv" style="font-size:large; color:blue;"><strong>text to copy</strong></div> <input type="button" id="idButton1" value="Copy Div" />
     <hr>
     <input type="button" id="idButton2" value="Copy html" />
 
@@ -20,7 +20,7 @@
         console.log(msg);
         var clipboard2 = new TinyClipboard({
             button: "idButton2",
-            content: '<a href="www.google.com"><strong>google link</strong></a>',
+            content: '<a href="www.google.com" style="font-size:large; color:red;font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif"><strong>google link</strong></a>',
             format: "html"
         });
     </script>
