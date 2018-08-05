@@ -43,7 +43,7 @@
             var input = document.createElement("div");
             input.style.position = "absolute";
             input.style.left = "-9999px";
-            input.setAttribute("contentEditable", true);
+            input.setAttribute("contentEditable", false);
             var contents = {
                 "html": function () { input.innerHTML = settings.content },
                 "text": function () { input.innerText = settings.content }
