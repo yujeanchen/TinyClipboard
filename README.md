@@ -12,8 +12,6 @@ var clipboard = new TinyClipboard({
   target: "idDiv"
   });
 ```
-Note: something like disabled and hidden elements won't work with the code above, please use next two. 
-
 Copy html/rich text to clipboard
 ```js
 var clipboard = new TinyClipboard({
