@@ -12,7 +12,7 @@ var clipboard = new TinyClipboard({
   target: "idDiv"
   });
 ```
-Copy html/rich text to clipboard
+Copy html/rich text to clipboard and keep formatting
 ```js
 var clipboard = new TinyClipboard({
   button: 'idButton',
@@ -41,7 +41,7 @@ var clipboard = new TinyClipboard({
 Destroy an element's TinyClipboard
 
 `.message()`:
-Returns true if the copy was successful
+Return true if the copy was successful
 
 # Support browsers
 IE 11, Chrome, Firefox, Safari 

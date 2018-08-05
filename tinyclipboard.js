@@ -1,3 +1,10 @@
+/*
+TinyClipboard v1
+https://github.com/yujeanchen/TinyClipboard
+MIT License
+Copyright (c) 2018 Yu-Jean Chen
+ */
+
 (function (root, factory) {
     if (typeof define === "function" && define.amd) {
         define([], factory(root));
@@ -94,7 +101,7 @@
                 msg = execCopy();
                 sel.removeAllRanges();
             } else {
-                console.log("target and content can't be used together")
+                console.log("target and content options can't be used together")
             }
         };
 
