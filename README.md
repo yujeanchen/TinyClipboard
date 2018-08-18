@@ -1,5 +1,7 @@
 # TinyClipboard
 Copy plain/rich text to clipboard in browsers
+# Demo
+https://www.yujeanchen.com/TinyClipboard
 
 # Setup
 Add `<script type="text/javascript" src="tinyclipboard.js"></script>` to your page 
