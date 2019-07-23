@@ -5,15 +5,11 @@ MIT License
 Copyright (c) 2018 Yu-Jean Chen
  */
 
-(function (root, factory) {
-    if (typeof define === "function" && define.amd) {
-        define([], factory(root));
-    } else if (typeof exports === 'object') {
-        module.exports = factory(root);
-    } else {
-        root.TinyClipboard = factory(root);
-    }
-})(typeof global !== "undefined" ? global : this.window || this.global, function (root) {
+(function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+        typeof define === 'function' && define.amd ? define(factory) :
+            (global = global || self, global.TinyClipboard = factory());
+}(this, function () {
     "use strict";
     var clipboard = function (options) {
         var defaults = {
@@ -125,4 +121,4 @@ Copyright (c) 2018 Yu-Jean Chen
 
     return clipboard;
 
-});
+}));
